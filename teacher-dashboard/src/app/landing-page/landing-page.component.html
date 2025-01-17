@@ -1,0 +1,91 @@
+
+
+
+<div id="spinner-container" class="spinner-container" *ngIf="isLoading">
+    <div class="spinner-grow" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-secondary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-success" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-danger" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+</div>
+  
+  
+  
+
+<div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 col-lg-2 bg-dark text-white vh-100 p-4">
+        <h3 class="border-bottom pb-3">Menu</h3>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-3">
+            <a 
+            [routerLink]="['']" 
+            class="nav-link text-white" 
+            style="cursor: pointer;" 
+            onmouseover="this.style.backgroundColor='red';" 
+            onmouseout="this.style.backgroundColor='';">
+            Home
+          </a>
+          
+            
+            
+          </li>
+          <li class="nav-item mb-3">
+            <a 
+            [routerLink]="['/dashboard']" 
+            class="nav-link text-white" 
+            style="cursor: pointer;" 
+            onmouseover="this.style.backgroundColor='red';" 
+            onmouseout="this.style.backgroundColor='';">
+            Dashboard
+          </a>
+          </li>
+          <li class="nav-item mb-3">
+            <a 
+            [routerLink]="['/schedule']" 
+            class="nav-link text-white" 
+            style="cursor: pointer;" 
+            onmouseover="this.style.backgroundColor='red';" 
+            onmouseout="this.style.backgroundColor='';">
+            Schedules
+          </a>
+          </li>
+          <li class="nav-item mb-3">
+            <a 
+            [routerLink]="['']" 
+            class="nav-link text-white" 
+            style="cursor: pointer;" 
+            onmouseover="this.style.backgroundColor='red';" 
+            onmouseout="this.style.backgroundColor='';">
+            Extra
+          </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Main Content -->
+      <div class="col-md-9 col-lg-10 d-flex flex-column align-items-center justify-content-center text-center bg-light vh-100">
+        <h1 class="display-3 text-primary">Welcome! [user name]</h1>
+        <p class="lead text-secondary">`{{quote}} - {{author}}`</p>
+      </div>
+    </div>
+  </div>
+  
+  

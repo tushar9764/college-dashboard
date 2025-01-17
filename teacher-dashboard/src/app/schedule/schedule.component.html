@@ -1,0 +1,43 @@
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Teacher's Schedule</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">teacher name</th>
+            <th scope="col">Class Name</th>
+            <th scope="col">Class Time</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let schedule of schedules; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>
+              <details>
+                <summary>{{ schedule.teacherName }}</summary>
+                <p>{{schedule.attendance}}%&nbsp;&nbsp;&nbsp; <button *ngIf="schedule.attendance<75">notify</button></p>
+
+              </details>
+              
+              </td>
+              
+            <td>{{ schedule.className }}</td>
+            <td>{{ schedule.classTime | date: 'MMM d, y, h:mm a' }}</td>
+            <td>
+              <span 
+                [ngClass]="{
+                  'badge badge-success': schedule.status === 'Active',
+                  'badge badge-danger': schedule.status === 'Cancelled'
+                }">
+                {{ schedule.status }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

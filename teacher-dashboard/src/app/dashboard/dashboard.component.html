@@ -1,0 +1,79 @@
+<div *ngIf="!dashboardData" class="text-center mt-5">
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <p>Loading...</p>
+  </div>
+  
+  <div class="container mt-5" *ngIf="dashboardData">
+    <div class="jumbotron text-center bg-primary text-white p-4 mb-4 rounded">
+        <h1 class="display-4">Welcome, {{ dashboardData?.teacher?.name }}</h1>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h3>Upcoming Classes</h3>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let class of dashboardData?.upcomingClasses">
+                        <strong>Subject:</strong> {{ class.subject }}<br>
+                        <strong>Start Time:</strong> {{ class.startTime }}<br>
+                        <strong>End Time:</strong> {{ class.endTime }}<br>
+                        <strong>Teacher:</strong> {{ class.teacher?.name }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+  
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                    <h3>Assignments</h3>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let assignment of dashboardData?.assignments">
+                        <strong>Title:</strong> {{ assignment.title }}<br>
+                        <strong>Due Date:</strong> {{ assignment.dueDate }}<br>
+                        <strong>Teacher:</strong> {{ assignment.teacher?.name }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3>Tests</h3>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let test of dashboardData?.tests">
+                        <strong>Subject:</strong> {{ test.subject }}<br>
+                        <strong>Date:</strong> {{ test.date }}<br>
+                        <strong>Teacher:</strong> {{ test.teacher?.name }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+  
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white">
+                    <h3>Student Progress</h3>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let progress of dashboardData?.studentProgress">
+                        <strong>Student:</strong> {{ progress.studentName }}<br>
+                        <strong>Feedback:</strong> {{ progress.feedback }}<br>
+                        <strong>Progress:</strong> {{ progress.progressPercentage }}%<br>
+                        <strong>Teacher:</strong> {{ progress.teacher?.name }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  

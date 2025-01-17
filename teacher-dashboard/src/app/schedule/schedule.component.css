@@ -1,0 +1,39 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+  }
+  
+  .badge {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.5em 1em; /* Adjust padding for better alignment */
+    border-radius: 0.25rem;
+  }
+  
+  .badge-success {
+    
+    color: rgb(0, 0, 0);
+  }
+  
+  .badge-danger {
+    
+    color: rgb(248, 0, 0);
+  }
+  button{
+   border:1px solid black;
+    padding: 6px;
+    border-radius: 8px;
+    
+  }
+  button:hover{
+    background-color: black;
+    color: white;
+  }
+  
