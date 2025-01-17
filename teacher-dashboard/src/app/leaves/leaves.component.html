@@ -1,1 +1,38 @@
-<p>leaves works!</p>
+
+
+<h2 style="text-align: center;" class="mt-5 mb-3">Applied Leaves</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Teacher ID</th>
+            <th>Teacher Name</th>
+            <th>Leave From</th>
+            <th>Leave Till</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let leave of leaves">
+            <td>{{leave.id}}</td>
+            <td>{{leave.teacherId}}</td>
+            <td>{{leave.teacherName}}</td>
+            <td> {{leave.leaveFrom}} </td>
+            <td>{{leave.leaveTill}}</td>
+            <td>
+                <button class="btn btn-sm btn-danger mx-1" (click)="deleteLeave(leave.id)">Delete</button>
+                <button class="btn btn-sm btn-secondary mx-1" >Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ul *ngIf="leaves.length; else noReservation">
+
+</ul>
+
+<ng-template #noReservation>
+    <p>No reservation available.</p>
+</ng-template>
+
