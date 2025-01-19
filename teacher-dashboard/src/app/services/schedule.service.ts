@@ -19,7 +19,7 @@ export interface Schedule {
   providedIn: 'root'
 })
 export class ScheduleService {
-
+  teacherId: number | null = null;
   private baseUrl = 'http://localhost:3001/schedules/1';
 
   constructor(private http: HttpClient) {}

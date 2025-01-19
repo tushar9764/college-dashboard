@@ -21,7 +21,7 @@
             <td>
               <details>
                 <summary>{{ schedule.teacherName }}</summary>
-                <p>{{schedule.attendance}}%&nbsp;&nbsp;&nbsp; <button *ngIf="schedule.attendance<75">notify</button></p>
+                <p>{{schedule.attendance}}%&nbsp;&nbsp;&nbsp; <button *ngIf="schedule.attendance<75" (click)="alertTeacher(schedule.teacherId)" [routerLink]="['/notifyAttendance']">notify</button></p>
 
               </details>
               

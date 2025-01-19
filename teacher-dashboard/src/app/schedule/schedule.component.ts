@@ -32,6 +32,12 @@ export class ScheduleComponent implements OnInit {
       },
     });
   }
+
+  alertTeacher(id:number){
+    this.scheduleService.teacherId=id;
+    
+
+  }
 //scghedules are now available in schedules
   // Enable editing mode for a schedule
 

@@ -1,0 +1,18 @@
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100"> 
+    <div class="card p-4" style="width: 400px;">
+      <h4 class="text-center">Send Message</h4>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message"  class="form-control" rows="4" placeholder="Type your message here...">Hello {{teacher?.teacherName}}, 
+please maintail attendance for the {{teacher?.className}} class above 75%. your current attendance is {{teacher?.attendance}}%.</textarea>
+      </div>
+      <button  class="btn btn-primary w-100" [routerLink]="['/schedule']">Send</button>
+    </div>
+     
+</div>
+
+
+ 
+  
+  
