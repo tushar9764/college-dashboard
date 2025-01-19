@@ -45,7 +45,7 @@ export class LandingPageComponent implements OnInit {
   showSpinnerForFixedTime() {
     setTimeout(() => {
       this.isLoading = false; // Hide spinner after 1.5 seconds
-    }, 1000);
+    }, 800);
   }
   
 }

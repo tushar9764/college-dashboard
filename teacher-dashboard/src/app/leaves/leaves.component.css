@@ -1,0 +1,16 @@
+.deleteButton{
+   background-color: white;
+   color: blue;
+   border-color: black;
+}
+.approveButton{
+    background-color: rgb(61, 61, 243);
+    color: white;
+    border-color: black;
+}
+.approvedButton{
+    width: 140px;
+    
+    background-color: rgb(255, 255, 255);
+    border-color: blue;
+}

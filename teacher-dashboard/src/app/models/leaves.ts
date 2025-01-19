@@ -3,5 +3,6 @@ export interface Leaves {
     teacherId:number,
     teacherName:string,
     leaveFrom:Date,
-    leaveTill:Date
+    leaveTill:Date,
+    status:number
 }

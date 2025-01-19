@@ -21,8 +21,12 @@
             <td> {{leave.leaveFrom}} </td>
             <td>{{leave.leaveTill}}</td>
             <td>
-                <button class="btn btn-sm btn-danger mx-1" (click)="deleteLeave(leave.id)">Delete</button>
-                <button class="btn btn-sm btn-secondary mx-1" >Edit</button>
+                <div *ngIf="leave.status==0" class="leaveButtons"><button class="btn btn-sm btn-danger mx-1 deleteButton" (click)="deleteLeave(leave.id)">Delete</button>
+                    <button class="btn btn-sm btn-secondary mx-1 approveButton" >Approve</button>
+                </div>
+                <div *ngIf="leave.status==1"><button class="btn btn-sm btn-warning mx-1 approvedButton"  >Approved</button></div>
+                
+                
             </td>
         </tr>
     </tbody>

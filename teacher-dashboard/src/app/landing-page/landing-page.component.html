@@ -32,7 +32,7 @@
     <div class="row">
       <!-- Sidebar -->
       <div class="col-md-3 col-lg-2 bg-dark text-white vh-100 p-4">
-        <h3 class="border-bottom pb-3">Menu</h3>
+        <h3 class="border-bottom pb-3">Dashboard</h3>
         <ul class="nav flex-column">
           <li class="nav-item mb-3">
             <a 
@@ -76,6 +76,19 @@
             onmouseout="this.style.backgroundColor='';">
             Leaves
           </a>
+          </li>
+          <li class="nav-item mb-3">
+            <a 
+            [routerLink]="['/studentInfo']" 
+            class="nav-link text-white" 
+            style="cursor: pointer;" 
+            onmouseover="this.style.backgroundColor='red';" 
+            onmouseout="this.style.backgroundColor='';">
+            Student Information
+          </a>
+          
+            
+            
           </li>
         </ul>
       </div>

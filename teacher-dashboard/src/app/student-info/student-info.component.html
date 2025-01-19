@@ -1,0 +1,38 @@
+
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Student Information</h2>
+  
+    <!-- Search Bar -->
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Student ID to search"
+        [(ngModel)]="searchId"
+      />
+    </div>
+  
+    <!-- Table -->
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th>CPI</th>
+          <th>Branch</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of filteredStudents()">
+        
+          <td>{{ student.id }}</td>
+          <td>{{ student.name }}</td>
+          <td>{{ student.latest_cpi }}</td>
+          <td>{{student.branch}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

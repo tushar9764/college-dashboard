@@ -5,11 +5,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LeavesComponent } from './leaves/leaves.component';
+import { StudentInfoComponent } from './student-info/student-info.component';
 const routes: Routes = [
   {path:"",component:LandingPageComponent},
   {path:"dashboard",component:DashboardComponent},
   {path:"schedule", component:ScheduleComponent},
-  {path:"leaves",component:LeavesComponent}
+  {path:"leaves",component:LeavesComponent},
+  {path:"studentInfo",component:StudentInfoComponent}
   
 ];
 

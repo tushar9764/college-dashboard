@@ -16,7 +16,7 @@ import { LeavesModule } from './leaves/leaves.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ScheduleModule } from './schedule/schedule.module';
 import { LandingPageModule } from './landing-page/landing-page.module';
-
+import { StudentInfoModule } from './student-info/student-info.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +37,8 @@ import { LandingPageModule } from './landing-page/landing-page.module';
     MatSelectModule,
     LandingPageModule,
     RouterModule,
-    LeavesModule
+    LeavesModule,
+    StudentInfoModule
 
   ],
   providers: [],

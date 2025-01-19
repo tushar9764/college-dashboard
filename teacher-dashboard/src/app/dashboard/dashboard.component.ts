@@ -8,11 +8,12 @@ import { OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   dashboardData: any;
-
+  isLoading:boolean=true;
   constructor(private teacherService: TeacherService) {}
 
   ngOnInit(): void {
     this.loadDashboard();
+    
   }
 
   loadDashboard(): void {
@@ -21,5 +22,6 @@ export class DashboardComponent implements OnInit {
       this.dashboardData = data;
     });
   }
+  
 
 }
