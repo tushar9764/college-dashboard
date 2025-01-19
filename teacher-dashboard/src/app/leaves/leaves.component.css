@@ -14,3 +14,22 @@
     background-color: rgb(255, 255, 255);
     border-color: blue;
 }
+table {
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+td {
+    padding: 8px;
+    text-align: center;
+}
+body{
+    position: absolute;
+}
+.returnHomeButton{
+    position: relative;
+    right: 155px;
+}

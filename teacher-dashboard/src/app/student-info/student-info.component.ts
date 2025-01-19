@@ -30,7 +30,8 @@ filteredStudents() {
     student.id.toLowerCase().includes(this.searchId.toLowerCase()) ||
     student.name.toLowerCase().includes(this.searchId.toLowerCase()) ||
     student.branch.toLowerCase().includes(this.searchId.toLowerCase()) ||
-    student.latest_cpi.toString()==(this.searchId)
+    student.latest_cpi.toString()==(this.searchId) ||
+    student.phone.toLowerCase().includes(this.searchId.toLowerCase())
   );
 }
 

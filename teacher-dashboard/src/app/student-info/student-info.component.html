@@ -1,7 +1,12 @@
-
-
 <div class="container mt-4">
     <h2 class="text-center mb-4">Student Information</h2>
+  
+    <!-- Return to Dashboard Button -->
+    <div class="d-flex justify-content-end mb-3">
+      <button class="btn btn-primary"  style="margin-right: 992px; background-color: white; color: black;" [routerLink]="['/addStudent']">Add a New Student</button>
+      <button class="btn btn-primary" [routerLink]="['/']">Return To Home</button>
+      
+    </div>
   
     <!-- Search Bar -->
     <div class="mb-3">
@@ -21,16 +26,16 @@
           <th>Student Name</th>
           <th>CPI</th>
           <th>Branch</th>
+          <th>Contact</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let student of filteredStudents()">
-        
           <td>{{ student.id }}</td>
           <td>{{ student.name }}</td>
           <td>{{ student.latest_cpi }}</td>
-          <td>{{student.branch}}</td>
-          
+          <td>{{ student.branch }}</td>
+          <td>{{ student.phone }}</td>
         </tr>
       </tbody>
     </table>

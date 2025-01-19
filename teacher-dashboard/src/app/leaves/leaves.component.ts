@@ -26,6 +26,30 @@ export class LeavesComponent implements OnInit {
       this.leaves = this.leaves.filter((leave: any) => leave.id !== id);
     });
   }
+
+  approveLeave(id:number):void{
+    const approvedLeave = this.leaves.find((leave: any) => leave.id === id);
+    if (approvedLeave) {
+      approvedLeave.status=1;
+      this.leaves = this.leaves.filter((leave: any) => true);
+      console.log(`Leave with id: ${id} has been approved.`);
+      // Add logic to handle the approval (e.g., update status, send to backend, etc.)
+    } else {
+      console.log(`Leave with id: ${id} not found.`);
+    }
+  }
+
+  undoApprove(id:number):void{
+    const approvedLeave = this.leaves.find((leave: any) => leave.id === id);
+    if (approvedLeave) {
+      approvedLeave.status=0;
+      this.leaves = this.leaves.filter((leave: any) => true);
+      console.log(`Leave with id: ${id} has been undoed.`);
+      // Add logic to handle the approval (e.g., update status, send to backend, etc.)
+    } else {
+      console.log(`Leave with id: ${id} not found.`);
+    }
+  }
   
 
 }
