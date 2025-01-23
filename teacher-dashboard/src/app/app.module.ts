@@ -17,6 +17,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { ScheduleModule } from './schedule/schedule.module';
 import { LandingPageModule } from './landing-page/landing-page.module';
 import { StudentInfoModule } from './student-info/student-info.module';
+import { LoginModule } from './login/login.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { StudentInfoModule } from './student-info/student-info.module';
     LandingPageModule,
     RouterModule,
     LeavesModule,
-    StudentInfoModule
+    StudentInfoModule,
+    LoginModule
 
   ],
   providers: [],

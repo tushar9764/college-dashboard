@@ -1,0 +1,35 @@
+
+<!-- student-dashboard.component.html -->
+
+<div class="container mt-5">
+    <div *ngIf="studentName" class="card">
+      <div class="card-header">
+        <h3>{{ studentName }}'s Dashboard</h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <h5><strong>ID:</strong> {{ id }}</h5>
+            <h5><strong>Name:</strong> {{ studentName }}</h5>
+            <h5><strong>CPI:</strong> {{ studentCpi }}</h5>
+          </div>
+          <div class="col-md-6">
+            <h5><strong>Department:</strong> {{ studentDepartment }}</h5>
+            <h5><strong>Attendance:</strong> {{ studentAttendance }}%</h5>
+          </div>
+        </div>
+        <div class="mt-4">
+          <h5><strong>Courses:</strong></h5>
+          <ul class="list-group">
+            <li *ngFor="let course of studentCourses" class="list-group-item">
+              {{ course }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!studentName" class="alert alert-warning mt-5">
+      Student data not found.
+    </div>
+  </div>
+  
