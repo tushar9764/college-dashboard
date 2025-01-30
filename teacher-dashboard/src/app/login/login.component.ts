@@ -40,7 +40,7 @@ export class LoginComponent {
             this.loginService.fetchStudentById(user.id).subscribe({
               next: (studentData) => {
                 console.log('Student data fetched:', studentData);
-                this.router.navigate(['student-dashboard'], {
+                this.router.navigate(['student-landing'], {
                   queryParams: { id: user.id },
                 });
               },
@@ -52,7 +52,7 @@ export class LoginComponent {
             console.log('HOD logged in with ID:', user.id);
   
             // Navigate to HOD dashboard
-            this.router.navigate(['hodLanding'], {
+            this.router.navigate(['landing-page'], {
               queryParams: { id: user.id },
             });
           } else {

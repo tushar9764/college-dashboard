@@ -13,7 +13,8 @@ import { StudentDashboardComponent } from './student-dashboard/student-dashboard
 import { StudentLandingComponent } from './student-landing/student-landing.component';
 const routes: Routes = [
   {path:"working",component:LoginComponent},
-  {path:"",component:LandingPageComponent},
+  {path:"",component:LoginComponent},
+  {path:"landing-page",component:LandingPageComponent},
   {path:"dashboard",component:DashboardComponent},
   {path:"schedule", component:ScheduleComponent},
   {path:"leaves",component:LeavesComponent},

@@ -8,7 +8,8 @@ import { AddNewStudentComponent } from '../add-new-student/add-new-student.compo
 @NgModule({
   declarations: [
     StudentInfoComponent,
-    AddNewStudentComponent
+    AddNewStudentComponent,
+    
   ],
   imports: [
     CommonModule,
