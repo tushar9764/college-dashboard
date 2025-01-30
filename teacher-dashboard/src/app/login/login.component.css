@@ -1,5 +1,16 @@
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  
+}
 .container {
-    background-color: #f8f9fa;
+    
+    margin-top: 30vh;
+    
+    
+   
   }
   .card {
     
@@ -9,3 +20,4 @@
   .loginButton{
     border-radius: 30px;
   }
+  

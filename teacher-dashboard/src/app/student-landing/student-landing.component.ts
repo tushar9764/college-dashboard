@@ -1,26 +1,29 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { LandingPageService } from '../services/landing-page.service';
-import { LandingPageModule } from './landing-page.module';
-
-
 @Component({
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  selector: 'app-student-landing',
+  templateUrl: './student-landing.component.html',
+  styleUrls: ['./student-landing.component.css']
 })
-export class LandingPageComponent implements OnInit {
+export class StudentLandingComponent implements OnInit{
+  isLoading: boolean = true;
+  author='';
   quotes: any[] = []; // Ensure it's initialized as an empty array
   quote = '';
-  hodName:string='';
-  author='';
   quoteLen = 0;
-  isLoading: boolean = true;
+
   constructor(private landingPageService: LandingPageService) {}
 
+
   ngOnInit() {
-    this.getQuotess();
     this.showSpinnerForFixedTime();
+  }
+
+  showSpinnerForFixedTime() {
+    setTimeout(() => {
+      this.isLoading = false; // Hide spinner after 1.5 seconds
+    }, 500);
   }
 
   getQuotess(): void {
@@ -44,11 +47,4 @@ export class LandingPageComponent implements OnInit {
     });
     
   }
-  showSpinnerForFixedTime() {
-    setTimeout(() => {
-      this.isLoading = false; // Hide spinner after 1.5 seconds
-    }, 500);
-  }
-  
 }
-

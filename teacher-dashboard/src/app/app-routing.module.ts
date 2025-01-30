@@ -10,18 +10,18 @@ import { AddNewStudentComponent } from './add-new-student/add-new-student.compon
 import { NotifyAttendanceComponent } from './notify-attendance/notify-attendance.component';
 import { LoginComponent } from './login/login.component';
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
+import { StudentLandingComponent } from './student-landing/student-landing.component';
 const routes: Routes = [
-  {path:"",component:LoginComponent},
-  {path:"hodLanding",component:LandingPageComponent},
+  {path:"working",component:LoginComponent},
+  {path:"",component:LandingPageComponent},
   {path:"dashboard",component:DashboardComponent},
   {path:"schedule", component:ScheduleComponent},
   {path:"leaves",component:LeavesComponent},
   {path:"studentInfo",component:StudentInfoComponent},
   {path:"addStudent",component:AddNewStudentComponent},
   {path:"notifyAttendance",component:NotifyAttendanceComponent},
-  {path:"student-dashboard",component:StudentDashboardComponent}
-  
-  
+  {path:"student-dashboard",component:StudentDashboardComponent},
+  {path:"student-landing",component:StudentLandingComponent}
 ];
 
 @NgModule({
